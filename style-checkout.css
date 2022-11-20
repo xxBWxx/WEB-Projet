@@ -1,0 +1,90 @@
+:root {
+  --main-color: #4a0a4a;
+  --secondary-color: #e906bf;
+  --optional-color: #a91079;
+  --dark-main: #260326;
+  --light-main: #831183;
+}
+
+* {
+  scroll-behavior: smooth;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style-type: none;
+  font-family: "Poppins", sans-serif;
+}
+
+*::selection {
+  background-color: var(--optional-color);
+  color: #fff;
+}
+
+.body-cont {
+  height: 100vh;
+  width: 100%;
+  background: linear-gradient(
+    to top right,
+    var(--dark-main),
+    var(--light-main),
+    var(--secondary-color)
+  );
+}
+
+.h-cont {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  width: 80%;
+  height: 30%;
+}
+
+h1 {
+  color: #fff;
+  font-size: 3em;
+}
+
+h2 {
+  color: #fff;
+  font-size: 2em;
+}
+
+.a-cont {
+  margin-top: 2em;
+  text-align: right;
+  width: 85%;
+}
+
+a {
+  color: #fff;
+  font-size: 1.4em;
+  font-weight: 700;
+  position: relative;
+}
+
+.arrow {
+  display: inline-block;
+  font-size: 1.3em;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  margin-left: 5px;
+}
+
+a::before {
+  content: "";
+  position: absolute;
+  bottom: -3px;
+  left: -5px;
+  width: 0;
+  height: 3px;
+  background-color: #fff;
+  transition: all 0.42s ease-in-out;
+}
+
+a:hover::before {
+  width: 134%;
+}

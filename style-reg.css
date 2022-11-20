@@ -1,0 +1,207 @@
+:root {
+  --main-color: #4a0a4a;
+  --secondary-color: #e906bf;
+  --optional-color: #a91079;
+  --dark-main: #260326;
+  --light-main: #831183;
+}
+
+* {
+  scroll-behavior: smooth;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style-type: none;
+  font-family: "Poppins", sans-serif;
+}
+
+*::selection {
+  background-color: var(--optional-color);
+  color: #fff;
+}
+
+.body-cont {
+  width: 100%;
+  max-height: 100vh;
+  height: 100vh;
+  position: relative;
+  background-image: url("img/matthias-wagner-QrqeusbpFMM-unsplash2.jpg");
+  background-position: center;
+  background-size: cover;
+}
+
+.index-link img {
+  width: 20em;
+}
+
+.index-link {
+  position: absolute;
+  display: inline-block;
+  top: 0;
+  left: 2%;
+}
+
+.reg-form {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 5%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: auto;
+  width: 40em;
+}
+
+.reg-form h2 {
+  margin: 0 0 2em 0;
+  color: #fff;
+  font-weight: 500;
+  letter-spacing: 0.1em;
+}
+
+.form-cont {
+  margin: 2.2em;
+  border-bottom: 2px solid #fff;
+  padding: 0 0 0.4em 1em;
+  width: 20em;
+  height: auto;
+  position: relative;
+}
+
+.reginput-cont input {
+  outline: none;
+  border: none;
+  background: transparent;
+  margin-left: 1em;
+  color: #fff;
+  width: 62%;
+}
+
+.fa-solid {
+  color: #fff;
+}
+
+.reg-btn {
+  outline: none;
+  border: none;
+  background: transparent;
+  color: #fff;
+  margin-right: 0.4em;
+  display: inline-block;
+  cursor: pointer;
+}
+
+.btn-cont i {
+  display: inline-block;
+  cursor: pointer;
+}
+
+.btn-cont {
+  text-align: right;
+  width: 20em;
+  position: relative;
+}
+
+.underline {
+  display: inline-block;
+  position: absolute;
+  right: 0;
+  width: 5em;
+  cursor: pointer;
+}
+
+.underline:after {
+  content: "";
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: #fff;
+  transition: all 0.42s ease-in-out;
+}
+
+.underline:hover:after {
+  width: 110%;
+}
+
+.error {
+  color: #fff;
+  background-color: #ef5350;
+  border: 2px solid #db3936;
+  border-radius: 3px;
+  position: absolute;
+  top: 10;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 110%;
+  margin-top: 1em;
+  padding: 10px 20px;
+  font-size: 0.8em;
+  text-align: center;
+}
+
+/* media */
+@media (max-width: 910px) {
+  .body-cont {
+    width: 100vw;
+    height: 100vh;
+  }
+
+  .reg-form {
+    width: 30em;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  .index-link img {
+    width: 10em;
+  }
+
+  .reg-form h2 {
+    margin-bottom: 1em;
+  }
+}
+
+@media (max-width: 800px) {
+  .reg-form {
+    width: 20em;
+  }
+
+  .reg-form h2 {
+    margin-bottom: 0.5em;
+    font-size: 1.2em;
+  }
+
+  .body-cont {
+    background-size: 130em;
+    background-position-x: -900px;
+  }
+}
+
+@media (max-width: 640px) {
+  .reg-form {
+    width: 20em;
+  }
+
+  .index-link img {
+    width: 8em;
+  }
+
+  .btn-cont {
+    text-align: right;
+    width: 13em;
+    position: relative;
+    margin-top: 2em;
+  }
+}
+
+@media (max-width: 460px) {
+  .form-cont {
+    width: 70%;
+  }
+}
